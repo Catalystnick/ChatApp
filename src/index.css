@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-image: url("./bg1.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    scrollbar-color: transparent transparent;
+    transition: all ease-in-out 0.2s;
+    scrollbar-width: thin;
+  }
+
+  .show-scrollbar {
+    scrollbar-color: rgba(42, 60, 94, 0.5) transparent;
+    transition: all ease-in-out 0.2s;
+    scrollbar-width: thin;
+  }
+}
