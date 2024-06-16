@@ -1,4 +1,4 @@
-# Chat App
+# Chat App - https://catalystnickchatapp.netlify.app/
 
 This is a real time chat application made using React and Google Firebase,Firebase Authentication
 
