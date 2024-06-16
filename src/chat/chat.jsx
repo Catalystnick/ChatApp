@@ -22,7 +22,7 @@ import { db } from "../lib/firebase";
 import { useChatStore } from "../lib/chatStore";
 import { useUserStore } from "../lib/userStore";
 import upload from "../lib/upload";
-
+import { toast } from "react-toastify";
 
 function Chat() {
   const [open, setOpen] = useState(false);
@@ -80,7 +80,7 @@ function Chat() {
         imgUrl = await upload(img.file);
       }
     } catch (error) {
-      console.log(error);
+      return null;
     }
 
     /* ADDING CHATS TO THE CHAT ARRAY */
@@ -116,7 +116,7 @@ function Chat() {
         }
       });
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong! Try again.");
     } finally {
       setText("");
     }

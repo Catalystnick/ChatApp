@@ -10,6 +10,7 @@ import { auth, db } from "../lib/firebase";
 import { useChatStore } from "../lib/chatStore";
 import { useUserStore } from "../lib/userStore";
 import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 
 function Detail() {
   const {
@@ -33,7 +34,7 @@ function Detail() {
       });
       changeBlock();
     } catch (err) {
-      console.log(err);
+      toast.error("Something went wrong!");
     }
   };
   return (

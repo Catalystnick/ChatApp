@@ -59,7 +59,7 @@ function ChatList() {
       });
       changeChat(chat.chatId, chat.user);
     } catch (error) {
-      console.log(error);
+      return null;
     }
   }
 

@@ -32,7 +32,7 @@ function App() {
       </div>
     );
 
-  console.log(currentUser);
+ 
   return (
     <div className="flex h-[90vh] w-[80vw] overflow-hidden rounded-[12px] border-2 border-[rgba(255,255,255,0.125)] bg-[rgba(17,25,40,0.75)] backdrop-blur-[10px] backdrop-saturate-[160%]">
       {currentUser ? (
